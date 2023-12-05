@@ -1,0 +1,149 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["inicial-inicial-module"],{
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/inicial/inicial.page.html":
+/*!*********************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/inicial/inicial.page.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ion-content>\r\n\r\n</ion-content>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/inicial/inicial.module.ts":
+/*!*******************************************!*\
+  !*** ./src/app/inicial/inicial.module.ts ***!
+  \*******************************************/
+/*! exports provided: InicialPageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InicialPageModule", function() { return InicialPageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _inicial_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./inicial.page */ "./src/app/inicial/inicial.page.ts");
+
+
+
+
+
+
+
+var routes = [
+    {
+        path: '',
+        component: _inicial_page__WEBPACK_IMPORTED_MODULE_6__["InicialPage"]
+    }
+];
+var InicialPageModule = /** @class */ (function () {
+    function InicialPageModule() {
+    }
+    InicialPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
+            ],
+            declarations: [_inicial_page__WEBPACK_IMPORTED_MODULE_6__["InicialPage"]]
+        })
+    ], InicialPageModule);
+    return InicialPageModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/inicial/inicial.page.scss":
+/*!*******************************************!*\
+  !*** ./src/app/inicial/inicial.page.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2luaWNpYWwvaW5pY2lhbC5wYWdlLnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/inicial/inicial.page.ts":
+/*!*****************************************!*\
+  !*** ./src/app/inicial/inicial.page.ts ***!
+  \*****************************************/
+/*! exports provided: InicialPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InicialPage", function() { return InicialPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_usuarios_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/usuarios.service */ "./src/app/services/usuarios.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _enums_nivel_enum__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../enums/nivel.enum */ "./src/app/enums/nivel.enum.ts");
+
+
+
+
+
+
+var InicialPage = /** @class */ (function () {
+    function InicialPage(router, usuariosService) {
+        this.router = router;
+        this.usuariosService = usuariosService;
+    }
+    InicialPage.prototype.ngOnInit = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                firebase__WEBPACK_IMPORTED_MODULE_4__["auth"]().onAuthStateChanged(function (usuario) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                    var nivel;
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                        switch (_a.label) {
+                            case 0:
+                                if (!(usuario == null)) return [3 /*break*/, 1];
+                                this.router.navigateByUrl('/login');
+                                return [3 /*break*/, 3];
+                            case 1: return [4 /*yield*/, this.usuariosService.checaNivel()];
+                            case 2:
+                                nivel = _a.sent();
+                                this.router.navigateByUrl((nivel == _enums_nivel_enum__WEBPACK_IMPORTED_MODULE_5__["Nivel"].Paciente ? '/paciente' : '/coordenador'));
+                                _a.label = 3;
+                            case 3: return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
+            });
+        });
+    };
+    InicialPage.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _services_usuarios_service__WEBPACK_IMPORTED_MODULE_2__["UsuariosService"] }
+    ]; };
+    InicialPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-inicial',
+            template: __webpack_require__(/*! raw-loader!./inicial.page.html */ "./node_modules/raw-loader/index.js!./src/app/inicial/inicial.page.html"),
+            styles: [__webpack_require__(/*! ./inicial.page.scss */ "./src/app/inicial/inicial.page.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_usuarios_service__WEBPACK_IMPORTED_MODULE_2__["UsuariosService"]])
+    ], InicialPage);
+    return InicialPage;
+}());
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=inicial-inicial-module-es5.js.map
