@@ -207,7 +207,7 @@ class Paciente {
         this.rank = 0;
     }
     get avatarURL() {
-        return `/assets/imgs/avatars/${this.avatar}.jpg`;
+        return `/nao-fume-site/assets/imgs/avatars/${this.avatar}.jpg`;
     }
 }
 Paciente.ctorParameters = () => [

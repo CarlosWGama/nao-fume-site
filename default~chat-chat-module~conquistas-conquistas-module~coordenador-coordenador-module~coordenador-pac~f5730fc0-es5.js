@@ -51,7 +51,7 @@ var Paciente = /** @class */ (function () {
     }
     Object.defineProperty(Paciente.prototype, "avatarURL", {
         get: function () {
-            return "/assets/imgs/avatars/" + this.avatar + ".jpg";
+            return "/nao-fume-site/assets/imgs/avatars/" + this.avatar + ".jpg";
         },
         enumerable: true,
         configurable: true
